@@ -5,7 +5,7 @@ class Solution {
         int n=heights.length;
         for(int i=0;i<=n;i++) {
             int currentHeight=(i==n) ? 0:heights[i];
-            while (!s.isEmpty() && currentHeight < heights[s.pee()]) {
+            while (!s.isEmpty() && currentHeight < heights[s.peek()]) {
                 int height=heights[s.pop()];
                 int width=s.isEmpty() ? i:i-s.peek()-1;
                 maxArea=Math.max(maxArea,height * width);
